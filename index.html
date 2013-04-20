@@ -233,7 +233,7 @@
                                 </div>
                                 <div class="controls controls-row">
                                     <input class="span4" type="text" placeholder="City" id="studentCity" required name="entry_360114617">
-                                    <input class="span2" type="text" placeholder="Zip code" id="studentZip" data-validation-regex-regex="^\d{5}(-\d{4})?$" data-validation-regex-message="Valid Zip Code is xxxxx or xxxxx-xxxx" required name="entry_187214447">
+                                    <input class="span2" type="text" pattern="\d*" placeholder="Zip code" id="studentZip" data-validation-regex-regex="^\d{5}(-\d{4})?$" data-validation-regex-message="Valid Zip Code is xxxxx or xxxxx-xxxx" required name="entry_187214447">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
@@ -241,8 +241,8 @@
                             <div class="control-group">
                                 <label class="control-label">Student's Phone Number</label>
                                 <div class="controls controls-row">
-                                    <input class="span3" type="text" placeholder="Home" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Home phone number is xxx-xxx-xxxx." required name="entry_801710216">
-                                    <input class="span3" type="text" placeholder="Cell" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Cell phone number is xxx-xxx-xxxx." name="entry_559042780">
+                                    <input class="span3" type="phone" pattern="\d*" placeholder="Home" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Home phone number is xxx-xxx-xxxx." required name="entry_801710216">
+                                    <input class="span3" type="phone" placeholder="Cell" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Cell phone number is xxx-xxx-xxxx." name="entry_559042780">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
