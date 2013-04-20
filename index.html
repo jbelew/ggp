@@ -1,0 +1,599 @@
+
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <!-- Base presentation classes -->
+        <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="css/docs.css" rel="stylesheet" media="screen">
+        <link href="css/bootstrap-lightbox.css" rel="stylesheet" media="screen">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+
+        <!-- Used for responsive video from YouTube and Vimeo -->
+        <link href="css/responsive-video.css" rel="stylesheet" media="screen">
+
+        <!-- Custom fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Bitter:400,700' rel='stylesheet' type='text/css'>
+        
+        <!-- CSS overrides -->
+        <style>   
+            body { 
+                font-family: 'Droid Sans', serif;
+                font-size: 14px;
+            }
+
+            h1, h2, h3, h4, legend {
+                font-family: 'Bitter', serif;
+                font-weight: bold;
+            }
+
+            input {
+                font-family: 'Droid Sans', serif;
+            }
+
+            .jumbotron {
+                padding: 1em;
+                color: #fff;
+                text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+                background: -moz-linear-gradient(left,  rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(left,  rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(left,  rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(left,  rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+                background: linear-gradient(to right,  rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+            }
+
+            .navbar-inverse .navbar-inner {
+                background-color: #1b1b1b;
+                background-image: -moz-linear-gradient(top, #DD0010, #90000B);
+                background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#DD0010), to(#90000B));
+                background-image: -webkit-linear-gradient(top, #DD0010, #90000B);
+                background-image: -o-linear-gradient(top, #DD0010, #90000B);
+                background-image: linear-gradient(to bottom, #DD0010, #90000B);
+                background-repeat: repeat-x;
+                border-color: #252525;
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff2222', endColorstr='#ff111111', GradientType=0);
+                color: #DD0010;
+            }
+
+            .navbar-inverse .nav  {
+                font-family: 'Droid Sans', serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: #ffffff;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .navbar-inverse .nav-collapse .nav > li > a {
+                color: #ffffff;
+            }
+
+            .navbar-inverse .nav-collapse .dropdown-menu a {
+                color: #000000;
+            }
+
+            .navbar-inverse .nav-collapse .dropdown-menu a:hover {
+                color: #ffffff;
+            }
+ 
+            .hero-unit {
+                background-color: #cccccc;
+                font-size: 14px;
+                line-height: 1.5em;
+                /* background-color: #F1893C; */
+            }
+
+            .hero-unit > h2, h3 {
+                margin-top: 0em;
+            }
+
+            legend {
+                margin-bottom: 0;
+            }
+
+            .carousel-control {
+                position: absolute; /* already here */
+                top: 45%;  /* Was top: 40% */
+            }
+
+        </style>
+    </head>
+    <body data-spy="scroll">
+
+        <!-- Top navigation -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand visible-desktop" style="color: #EE6B75; text-shadow: 1px 1px 2px rgba(0,0,0,.3);" href="./index.html">GGPH.org</a>
+                    <a class="brand hidden-desktop" style="color: #EE6B75; text-shadow: 1px 1px 2px rgba(0,0,0,.3);" href="./index.html">Golden Gate Philharmonic</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class=""><a href="./index.html">Home</a></li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a>
+                                <ul class="dropdown-menu hidden-phone hidden-tablet">
+                                    <li><a href="#">Contact Us</a>
+                                    <li><a href="#">Registration</a>
+                                    <li><a href="#">Mailing List</a>
+                                    <li><a href="#">Calendar</a>
+                                </ul>
+                            </li>
+                            <li class=""><a href="#">Faculty</a></li>
+                            <li class=""><a href="#">Participation</a></li>
+                            <li class=""><a href="#">Performances</a></li>
+                            <li class=""><a href="#">Support</a></li>
+                            <li class=""><a href="#">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero image at top of page. Replace the image below to customize -->
+        <div style="background: url('img/4.png') no-repeat;">
+            <header class="jumbotron subhead" id="overview">
+                <div class="container">
+                    <h1>About</h1>
+                    <!-- <p class="lead">Overview of the project, its contents, and how to get started with a simple template.</p> -->
+                </div>
+            </header>
+        </div>
+
+        <!-- Main body of the page -->
+        <div class="container" style="margin-top: 2em;">
+
+            <div class="row">
+
+                <!-- This DIV set the left nav to 3 columns on the grid -->
+                <div class="span3">
+
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li><a href="#">Contact Us</a>
+                        <li><a href="#">Registration</a>
+                        <li><a href="#">Mailing List</a>
+                        <li><a href="#">Calendar</a>
+                    </ul>
+
+                    <div class="hero-unit hidden-phone" style="padding: 1em;">
+                        <h4>Information</h4>
+                        <p>Orchestra meets on Tuesdays after school at <a href="https://maps.google.com/maps?hl=en&q=555+portola+drive+san+francisco+ca&ie=UTF8&hq=&hnear=555+Portola+Dr,+San+Francisco,+California+94131&gl=us&ll=37.745211,-122.445915&spn=0.011758,0.019462&t=w&z=16&vpsrc=0" target="_blank">San Francisco’s School of the Arts (555 Portola Drive).</a></p>
+                        <p><a href="http://www.cafepress.com/ggph" target="_blank">Visit our Cafepress GGP Logo Store</a></p>
+                    </div>
+
+                    <div class="hero-unit hidden-phone" style="padding: 1em;">
+                        <h4>Important Dates</h4>
+                        <p>Orchestra meets on Tuesdays after school at <a href="https://maps.google.com/maps?hl=en&q=555+portola+drive+san+francisco+ca&ie=UTF8&hq=&hnear=555+Portola+Dr,+San+Francisco,+California+94131&gl=us&ll=37.745211,-122.445915&spn=0.011758,0.019462&t=w&z=16&vpsrc=0" target="_blank">San Francisco’s School of the Arts (555 Portola Drive).</a></p>
+                        <p><a href="http://www.cafepress.com/ggph" target="_blank">Visit our Cafepress GGP Logo Store</a></p>
+                    </div>
+
+                <!-- Close span3 -->
+                </div>
+
+                <div class="span6">
+
+                    <!-- Sample page header -->
+                    <!--
+                    <div class="page-header" style="margin-top: 0;">
+                        <h1>Example page header <small>Subtext for header</small></h1>
+                    </div>
+                    -->
+
+                    <!-- Sample Carousel -->
+                    <div id="myCarousel" class="carousel slide">
+                        <h2>Sample Image Carousel</h2>
+                        <div class="carousel-inner">
+                            <div class="active item" data-slide-number="0">
+                                <img src="http://badassgeek.com/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=53687&g2_serialNumber=2" />
+                                <div class="carousel-caption">
+                                    <h4>First Thumbnail label</h4>
+                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                 </div>
+                            </div>
+                            <div class="item" data-slide-number="1">
+                                <img src="http://badassgeek.com/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=53606&g2_serialNumber=2" />
+                                <div class="carousel-caption">
+                                    <h4>Second Thumbnail label</h4>
+                                    <p>Morbi eu eros in justo bibendum porta in ac arcu. Sed ullamcorper tristique orci quis vehicula.</p>
+                                 </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros in justo bibendum porta in ac arcu. Sed ullamcorper tristique orci quis vehicula. Sed commodo enim at odio rutrum mattis at ac orci. Nam hendrerit, nibh sit amet fringilla tempus, risus mi sollicitudin justo, id consectetur tellus dui suscipit tortor. Ut lobortis mauris at arcu pellentesque posuere. In dignissim posuere ante eu varius. Ut pellentesque rhoncus feugiat. Nulla facilisi.</p>
+
+                    <form class="forms-horizontal" action="https://docs.google.com/forms/d/1Arw5ogV8Mfn9O6_xysVIj-boY5X6etFWgnwBdA44CSo/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+            
+                        <fieldset>
+                            <legend>Student Information</legend>
+                            <div class="control-group">
+                                <label class="control-label">Student's Name</label>
+                                <div class="controls controls-row">
+                                    <input class="span3" type="text" placeholder="Last name" required name="entry.2005721551">
+                                    <input class="span3" type="text" placeholder="First name" required name="entry.284585522">
+                                </div>
+                                <span class="help-inline">Please correct the error</span>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Student's Address</label>
+                                <div class="controls controls-row">
+                                    <input class="span6" type="text" placeholder="Street Address 1" id="studentAddress1" required name="entry_560162546">
+                                </div>
+                                <div class="controls controls-row">
+                                    <input class="span6" type="text" placeholder="Street Address 2" id="studentAddress2" name="entry_308542024">
+                                </div>
+                                <div class="controls controls-row">
+                                    <input class="span4" type="text" placeholder="City" id="studentCity" required name="entry_360114617">
+                                    <input class="span2" type="text" placeholder="Zip code" id="studentZip" data-validation-regex-regex="^\d{5}(-\d{4})?$" data-validation-regex-message="Valid Zip Code is xxxxx or xxxxx-xxxx" required name="entry_187214447">
+                                </div>
+                                <p class="help-inline"></p>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">Student's Phone Number</label>
+                                <div class="controls controls-row">
+                                    <input class="span3" type="text" placeholder="Home" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Home phone number is xxx-xxx-xxxx." required name="entry_801710216">
+                                    <input class="span3" type="text" placeholder="Cell" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Cell phone number is xxx-xxx-xxxx." name="entry_559042780">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Student's Email</label>
+                                <div class="controls">
+                                    <input class="span6" type="email" placeholder="Email" data-validation-email-message="A valid email address is name@domain.com" name="entry_1425951050">
+                                </div>
+                            </div>
+                             <div class="control-group">
+                                <label class="control-label">School</label>
+                                <div class="controls controls-row">
+                                    <input class="span4" type="text" placeholder="School" required name="entry_87974974">
+                                    <select class="span2" required name="entry_509081071">
+                                        <option value="">Grade in September</option>
+                                        <option value="K">K</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Music Information</legend>
+                            <div class="control-group">
+                                <label class="control-label">Intrument</label>
+                                <div class="controls controls-row">
+                                    <select class="span4" required>
+                                        <option>Instrument</option>
+                                        <option>Violin</option>
+                                        <option>Viola</option>
+                                        <option>Cello</option>
+                                        <option>Bass</option>
+                                    </select>
+                                    <input class="span2" type="text" placeholder="Years Played" required>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Previous Intrument</label>
+                                <div class="controls controls-row">
+                                    <input class="span4" type="text" placeholder="Instrument">
+                                    <input class="span2" type="text" placeholder="Years Played">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Music Teacher</label>
+                                <div class="controls">
+                                    <input class="span6" type="text" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Current Piece</label>
+                                <div class="controls">
+                                    <input class="span6" type="text" placeholder="Name">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Parent Information</legend>
+                            <h4 style="padding-top: 1em;">Parent 1</h4>
+
+                            <div class="control-group">
+                                <label class="control-label">Parent's Name</label>
+                                <div class="controls controls-row">
+                                    <input class="span3" type="text" placeholder="Last name" required>
+                                    <input class="span3" type="text" placeholder="First name" required>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">Parent's Address</label>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="sameAddress1" data-parent="#accordion1" href="#collapseOne"> Same as Student's
+                                </label>
+                            </div>
+
+                            <div id="collapseOne" class="accordion-body collapse in">
+                                <div class="accordion-inner" style="padding: 0;">
+
+                                    <div class="control-group">
+                                        <div class="controls controls-row">
+                                            <input class="span6" type="text" placeholder="Street Address 1" id="parent1Address1" required>
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input class="span6" type="text" placeholder="Street Address 2" id="parent1Address2">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input class="span4" type="text" placeholder="City" id="parent1City" required>
+                                            <input class="span2" type="text" placeholder="Zip code" id="parent1Zip" data-validation-regex-regex="^\d{5}(-\d{4})?$" data-validation-regex-message="A valid Zip Code is xxxxx or xxxxx-xxxx" required>
+                                        </div>
+                                        <p class="help-block"></p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">Parent's Phone Number</label>
+                                <div class="controls controls-row">
+                                    <input class="span3" type="text" placeholder="Home" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Home phone number is xxx-xxx-xxxx." required>
+                                    <input class="span3" type="text" placeholder="Cell" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Cell phone number is xxx-xxx-xxxx.">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">Parent's Email</label>
+                                <div class="controls">
+                                    <input class="span6" type="email" placeholder="Email" data-validation-email-message="A valid email address is name@domain.com">
+                                </div>
+                            </div>
+                            <h4 style="padding-top: 1em;">Parent 2</h4>
+                            <div class="control-group">
+                                <label class="control-label">Parent's Name</label>
+                                <div class="controls controls-row">
+                                    <input class="span3" type="text" placeholder="Last name">
+                                    <input class="span3" type="text" placeholder="First name">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">Parent's Address</label>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="sameAddress2" data-parent="#accordion2" href="#collapseTwo"> Same as Student's
+                                </label>
+                            </div>
+
+                            <div id="collapseTwo" class="accordion-body collapse in">
+                                <div class="accordion-inner" style="padding: 0;">
+
+                                    <div class="control-group">
+                                        <div class="controls controls-row">
+                                            <input class="span6" type="text" placeholder="Street Address 1" id="parent2Address1">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input class="span6" type="text" placeholder="Street Address 2" id="parent2Address2">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input class="span4" type="text" placeholder="City" id="parent2City">
+                                            <input class="span2" type="text" placeholder="Zip code" id="parent2Zip" data-validation-regex-regex="^\d{5}(-\d{4})?$" data-validation-regex-message="A valid Zip Code is xxxxx or xxxxx-xxxx">
+                                        </div>
+                                        <p class="help-block"></p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">Parent's Phone Number</label>
+                                <div class="controls controls-row">
+                                    <input class="span3" type="text" placeholder="Home" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Home Phone number is xxx-xxx-xxxx.">
+                                    <input class="span3" type="text" placeholder="Cell" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Cell Phone number is xxx-xxx-xxxx.">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Parent's Email</label>
+                                <div class="controls">
+                                    <input class="span6" type="email" placeholder="Email" data-validation-email-message="A valid email address is name@domain.com">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn">Cancel</button>
+                        </div>
+                
+                    </form>
+
+                <!-- Close span6 -->
+                </div>
+
+                <div class="span3">
+
+                    <ul class="thumbnails">
+                        <li class="span3">
+                            <div class="thumbnail" style="padding: 1em;">
+                                <h4 style="margin-top: 0;">Cazzadero</h4>
+
+                                <div style="margin-bottom: 1em;">
+                                    <a data-toggle="lightbox" href="#lightBox1" class="thumbnail"><img src="http://badassgeek.com/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=53681&g2_serialNumber=2" alt="" /></a>
+                                </div>
+                                <div id="lightBox1" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class='lightbox-header'>
+                                        <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button>
+                                    </div>
+                                    <div class='lightbox-content'>
+                                        <img src="http://badassgeek.com/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=53681&g2_serialNumber=2" />
+                                        <div class="lightbox-caption"><h4>Sample Header</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros in justo bibendum porta in ac arcu. Sed ullamcorper tristique orci quis vehicula.</p></div>
+                                    </div>
+                                </div>
+
+                                <div style="margin-bottom: 1em;">
+                                    <a data-toggle="lightbox" href="#lightBox2" class="thumbnail"><img src="http://badassgeek.com/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=53654&g2_serialNumber=2" alt="" /></a>
+                                </div>
+                                <div id="lightBox2" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class='lightbox-header'>
+                                        <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button>
+                                    </div>
+                                    <div class='lightbox-content'>
+                                        <img src="http://badassgeek.com/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=53654&g2_serialNumber=2" />
+                                        <div class="lightbox-caption"><h4>Sample Header</h4><p>Sed commodo enim at odio rutrum mattis at ac orci. Nam hendrerit, nibh sit amet fringilla tempus, risus mi sollicitudin justo, id consectetur tellus dui suscipit tortor. Ut lobortis mauris at arcu pellentesque posuere. </p></div>
+                                    </div>
+                                </div>
+
+                                <div style="margin-bottom: 1em;">
+                                    <a data-toggle="lightbox" href="#lightBox3" class="thumbnail"><img src="http://badassgeek.com/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=53480&g2_serialNumber=2" alt="" /></a>
+                                </div>
+                                <div id="lightBox3" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class='lightbox-header'>
+                                        <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button>
+                                    </div>
+                                    <div class='lightbox-content'>
+                                        <img src="http://badassgeek.com/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=53480&g2_serialNumber=2" />
+                                        <div class="lightbox-caption"><h4>Sample Header</h4><p>In dignissim posuere ante eu varius. Ut pellentesque rhoncus feugiat. Nulla facilisi.</p></div>
+                                    </div>
+                                </div>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    
+                    <div class="thumbnail" style="padding: 1em;">
+                        <h4 style="margin-top: 0;">Performance Videos</h4>
+                        <div class="flex-video widescreen">
+                            <iframe width="560" height="315" src="http://www.youtube.com/embed/gjOsMyvxjdE?list=UU9qcXtMbvgJhZ6mFx3rMybg" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                <!-- Close span3 -->
+                </div>
+
+            <!-- Close row -->
+            </div>
+
+
+
+        <!-- Close container -->
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+                <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+                <!--
+                <ul class="footer-links">
+                    <li><a href="http://blog.getbootstrap.com">Blog</a></li>
+                    <li class="muted">&middot;</li>
+                    <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Issues</a></li>
+                    <li class="muted">&middot;</li>
+                    <li><a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md">Changelog</a></li>
+                </ul>
+            -->
+            </div>
+        </footer>
+
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap-transition.js"></script>
+        <script src="js/bootstrap-alert.js"></script>
+        <script src="js/bootstrap-dropdown.js"></script>
+        <script src="js/bootstrap-scrollspy.js"></script>
+        <script src="js/bootstrap-tab.js"></script>
+        <script src="js/bootstrap-tooltip.js"></script>
+        <script src="js/bootstrap-button.js"></script>
+        <script src="js/bootstrap-collapse.js"></script>
+        <script src="js/bootstrap-carousel.js"></script>
+        <script src="js/bootstrap-validation.js"></script>
+        <script src="js/bootstrap-lightbox.js"></script>
+    <!--
+        <script src="js/bootstrap-popover.js"></script>
+        <script src="js/bootstrap-modal.js"></script>
+        <script src="js/bootstrap-typeahead.js"></script>
+        <script src="js/bootstrap-affix.js"></script>
+    -->
+        <script src="js/holder.js"></script>
+
+        <script type="text/javascript">
+            $( document ).ready( function(){
+                // fire the following code when the #sameaddress checkbox is ticked
+                $( '#sameAddress1' ).click( function() {
+
+                    // if the #sameaddress checkbox is ticked copy the address form
+                    // field values to the corresponding billing address fields
+                    if( $( '#sameAddress1' ).is( ':checked' ) ){
+                        $( '#parent1Address1' ).val( $( '#studentAddress1' ).val() );
+                        $( '#parent1Address2' ).val( $( '#studentAddress2' ).val() );
+                        $( '#parent1City' ).val( $( '#studentCity' ).val() );
+                        $( '#parent1Zip' ).val( $( '#studentZip' ).val() );
+                        $( '#collapseOne' ).collapse('hide');
+                    }
+                    else
+                    {
+                    // if the #sameaddress checkbox is not ticked set the billing address fields as empty
+                        $( '#parent1Address1,#parent1Address2,#parent1City,#parent1Zip' ).val( '' );
+                        $( '#collapseOne' ).collapse('show');
+                    }
+                });
+
+                $( '#sameAddress2' ).click( function() {
+
+                    // if the #sameaddress checkbox is ticked copy the address form
+                    // field values to the corresponding billing address fields
+                    if( $( '#sameAddress2' ).is( ':checked' ) ){
+                        $( '#parent2Address1' ).val( $( '#studentAddress1' ).val() );
+                        $( '#parent2Address2' ).val( $( '#studentAddress2' ).val() );
+                        $( '#parent2City' ).val( $( '#studentCity' ).val() );
+                        $( '#parent2Zip' ).val( $( '#studentZip' ).val() );
+                        $( '#collapseTwo' ).collapse('hide');
+                    }
+                    else
+                    {
+                    // if the #sameaddress checkbox is not ticked set the billing address fields as empty
+                        $( '#parent2Address1,#parent2Address2,#parent2City,#parent2Zip' ).val( '' );
+                        $( '#collapseTwo' ).collapse('show');
+                    }
+                });
+
+            });
+
+            $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
+
+            $(document).ready(function() {
+                var elements = document.getElementsByTagName("INPUT");
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].oninvalid = function(e) {
+                        e.target.setCustomValidity("");
+                        if (!e.target.validity.valid) {
+                            e.target.setCustomValidity("This field cannot be left blank");
+                        }
+                    };
+                    elements[i].oninput = function(e) {
+                        e.target.setCustomValidity("");
+                    };
+                }
+            })
+
+        </script>
+
+    </body>
+</html>
