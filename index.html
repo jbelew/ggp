@@ -536,12 +536,10 @@
         <script src="js/bootstrap-carousel.js"></script>
         <script src="js/bootstrap-validation.js"></script>
         <script src="js/bootstrap-lightbox.js"></script>
-    <!--
         <script src="js/bootstrap-popover.js"></script>
         <script src="js/bootstrap-modal.js"></script>
         <script src="js/bootstrap-typeahead.js"></script>
         <script src="js/bootstrap-affix.js"></script>
-    -->
         <script src="js/holder.js"></script>
 
         <script type="text/javascript">
@@ -595,7 +593,7 @@
                     elements[i].oninvalid = function(e) {
                         e.target.setCustomValidity("");
                         if (!e.target.validity.valid) {
-                            e.target.setCustomValidity("This field cannot be left blank");
+                            e.target.setCustomValidity("This field cannot be left blank.");
                         }
                     };
                     elements[i].oninput = function(e) {
