@@ -115,7 +115,7 @@
               if ($this.data("validationPatternMessage")) {
                 message = $this.data("validationPatternMessage");
               }
-              $this.data("validationPatternMessage", message);
+              // $this.data("validationPatternMessage", message);
               $this.data("validationPatternRegex", $this.attr("pattern"));
             }
             // ---------------------------------------------------------
@@ -448,12 +448,12 @@
           );
           $this.bind(
             [
-              "keyup",
+              // "keyup",
               "focus",
               "blur",
               "click",
-              "keydown",
-              "keypress",
+              // "keydown",
+              // "keypress",
               "change"
             ].join(".validation ") + ".validation",
             function (e, params) {
