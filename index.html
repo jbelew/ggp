@@ -154,7 +154,7 @@
 
             <!-- Sample page header -->
             <div class="page-header" style="margin-top: 0;">
-                <h2>Join the GGP Today! <small>Subtext for header</small></h2>
+                <h2>Join the GGP Today!</h2>
             </div>
 
             <div class="row">
@@ -164,7 +164,7 @@
 
                     <ul class="nav nav-tabs nav-stacked">
                         <li><a href="#">Contact Us</a>
-                        <li><a href="#">Registration</a>
+                        <li class="selected"><a href="#">Registration</a>
                         <li><a href="#">Mailing List</a>
                         <li><a href="#">Calendar</a>
                     </ul>
@@ -213,29 +213,32 @@
 
                     <h3>Student Registration Form</h3>
 
-                    <form class="forms-horizontal" action="https://docs.google.com/forms/d/1Arw5ogV8Mfn9O6_xysVIj-boY5X6etFWgnwBdA44CSo/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+                    <script type="text/javascript">var submitted=false;</script>
+                    <iframe id="redirect" style="display:none;" onload="if(submitted) {window.location='http://www.badassgeek.com/ggp/confirmation.html';}"></iframe>
+
+                    <form class="forms-horizontal" action="https://docs.google.com/forms/d/1pzb-0YRzIWBTawsSIo2NMG0PF2GGB77nllRET-QH684/formResponse" method="POST" id="ss-form" target="redirect" onsubmit="submitted=true;" novalidate>
             
                         <fieldset>
                             <legend><h4>Student Information</h4></legend>
                             <div class="control-group">
                                 <label class="control-label">Student's Name</label>
                                 <div class="controls controls-row">
-                                    <input class="span3" type="text" placeholder="Last name" minlength="2" data-validation-minlength-message="Please enter the student's Last name" bs-required name="entry.2005721551">
-                                    <input class="span3" type="text" placeholder="First name" minlength="2" data-validation-minlength-message="Please enter the student's First name" bs-required name="entry.284585522">
+                                    <input class="span3" type="text" placeholder="Last name" minlength="2" required data-validation-minlength-message="Please enter the student&#39;s last name" data-validation-required-message="Student&#39;s last name is required" name="entry.1427412331">
+                                    <input class="span3" type="text" placeholder="First name" minlength="2" required data-validation-minlength-message="Please enter the student&#39;s first name" data-validation-required-message="Student&#39;s first name is required" name="entry.2103065976">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Student's Address</label>
                                 <div class="controls controls-row">
-                                    <input class="span6" type="text" placeholder="Street Address 1" id="studentAddress1" bs-required name="entry_560162546">
+                                    <input class="span6" type="text" placeholder="Street Address 1" minlength="2" required data-validation-minlength-message="Please enter the student&#39;s address" data-validation-required-message="Student&#39;s address is required" id="studentAddress1" name="entry.1287574879">
                                 </div>
                                 <div class="controls controls-row">
-                                    <input class="span6" type="text" placeholder="Street Address 2" id="studentAddress2" name="entry_308542024">
+                                    <input class="span6" type="text" placeholder="Street Address 2" minlength="2" data-validation-minlength-message="Please enter the student&#39;s address" id="studentAddress2" name="entry.1770251736">
                                 </div>
                                 <div class="controls controls-row">
-                                    <input class="span4" type="text" placeholder="City" id="studentCity" bs-required name="entry_360114617">
-                                    <input class="span2" type="text" pattern="\d*" placeholder="Zip code" id="studentZip" data-validation-regex-regex="^\d{5}(-\d{4})?$" data-validation-regex-message="Valid Zip Code is xxxxx or xxxxx-xxxx" bs-required name="entry_187214447">
+                                    <input class="span4" type="text" placeholder="City" minlength="2" required data-validation-minlength-message="Please enter the student&#39;s city" data-validation-required-message="Student&#39;s city is required" id="studentCity"  name="entry.124001901">
+                                    <input class="span2" type="text" pattern="(\d{5}([\-]\d{4})?)" required placeholder="Zip code" data-validation-pattern-message="A valid zip code is xxxxx or xxxxx-xxxx" data-validation-required-message="Student&#39;s zip code is required" id="studentZip" name="entry.1081028019">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
@@ -243,23 +246,23 @@
                             <div class="control-group">
                                 <label class="control-label">Student's Phone Number</label>
                                 <div class="controls controls-row">
-                                    <input class="span3" type="text" placeholder="Home" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Home phone number is xxx-xxx-xxxx." bs-required name="entry_801710216">
-                                    <input class="span3" type="text" placeholder="Cell" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Cell phone number is xxx-xxx-xxxx." name="entry_559042780">
+                                    <input class="span3" type="text" placeholder="Home" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" required data-validation-pattern-message="A valid home phone number is xxx-xxx-xxxx" data-validation-required-message="Student&#39;s home phone number  is required" name="entry.1388054789">
+                                    <input class="span3" type="text" placeholder="Cell" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-pattern-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-pattern-message="A valid cell phone number is xxx-xxx-xxxx" name="entry.2010040286">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Student's Email</label>
                                 <div class="controls">
-                                    <input class="span6" type="email" placeholder="Email" data-validation-email-message="A valid email address is name@domain.com" name="entry_1425951050">
+                                    <input class="span6" type="email" placeholder="Email" data-validation-email-message="A valid email address is name@domain.com" name="entry.185930469">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
                              <div class="control-group">
                                 <label class="control-label">School</label>
                                 <div class="controls controls-row">
-                                    <input class="span4" type="text" placeholder="School" bs-required name="entry_87974974" />
-                                    <select class="span2" bs-required name="entry_509081071">
+                                    <input class="span4" type="text" placeholder="School" minlength="2" required data-validation-minlength-message="Please enter the student&#39;s school" data-validation-required-message="Student&#39;s school is required" name="entry.111911426" />
+                                    <select class="span2" required data-validation-required-message="Grade level in September is required" name="entry.452786849">
                                         <option value="">Grade in September</option>
                                         <option value="K">K</option>
                                         <option value="1">1</option>
@@ -280,41 +283,41 @@
                             </div>
                         </fieldset>
 
-                        <fieldset>
+                      <fieldset>
                             <legend><h4>Music Information</h4></legend>
                             <div class="control-group">
                                 <label class="control-label">Intrument</label>
                                 <div class="controls controls-row">
-                                    <select class="span4" bs-required>
-                                        <option>Instrument</option>
-                                        <option>Violin</option>
-                                        <option>Viola</option>
-                                        <option>Cello</option>
-                                        <option>Bass</option>
+                                    <select class="span4" required data-validation-required-message="Student&#39;s instrument is required" name="entry.1636871964">
+                                        <option value="">Instrument</option>
+                                        <option value="Violin">Violin</option>
+                                        <option value="Viola">Viola</option>
+                                        <option value="Cello">Cello</option>
+                                        <option value="Bass">Bass</option>
                                     </select>
-                                    <input class="span2" type="text" pattern="\d*" placeholder="Years Played" bs-required>
+                                    <input class="span2" type="text" pattern="\d*" placeholder="Years Played" required data-validation-pattern-message="Please enter the number of years the student has been playing the selected instrument" data-validation-required-message="The number of years the student has been playing their instrument is required" name="entry.1063183318">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Previous Intrument</label>
                                 <div class="controls controls-row">
-                                    <input class="span4" type="text" placeholder="Instrument">
-                                    <input class="span2" type="text" pattern="\d*" placeholder="Years Played">
+                                    <input class="span4" type="text" placeholder="Instrument" name="entry.1984431309">
+                                    <input class="span2" type="text" pattern="\d*" placeholder="Years Played" data-validation-pattern-message="Please enter the number of years the student played thier previous instrument" name="entry.1508682916">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Music Teacher</label>
                                 <div class="controls">
-                                    <input class="span6" type="text" placeholder="Name">
+                                    <input class="span6" type="text" placeholder="Name" minlength="2" data-validation-minlength-message="Please enter the name of the student&#39;s music teacher" name="entry.1495915359">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Current Piece</label>
                                 <div class="controls">
-                                    <input class="span6" type="text" placeholder="Name">
+                                    <input class="span6" type="text" placeholder="Name" minlength="2" data-validation-minlength-message="Please enter the name of the piece the student is currently studying" name="entry.421506774">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
@@ -325,18 +328,17 @@
                             <h5 style="padding-top: 1em;">Parent 1</h5>
 
                             <div class="control-group">
-                                <label class="control-label">Parent's Name</label>
+                                <label class="control-label">Parent&#39;s Name</label>
                                 <div class="controls controls-row">
-                                    <input class="span3" type="text" placeholder="Last name" required>
-                                    <input class="span3" type="text" placeholder="First name" required>
+                                    <input class="span3" type="text" placeholder="Last name" minlength="2" required data-validation-minlength-message="Please enter the parent&#39;s last name" data-validation-required-message="Parent&#39;s last name is required" name="entry.800952487">
+                                    <input class="span3" type="text" placeholder="First name" minlength="2" required data-validation-minlength-message="Please enter the parent&#39;s first name" data-validation-required-message="Parent&#39;s first name is required" name="entry.1288117817">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
 
                             <div class="control-group">
-                                <label class="control-label">Parent's Address</label>
                                 <label class="checkbox">
-                                    <input type="checkbox" id="sameAddress1" data-parent="#accordion1" href="#collapseOne"> Same as Student's
+                                    <input type="checkbox" id="sameAddress1" data-parent="#accordion1" href="#collapseOne"> Same as Student&#39;s
                                 </label>
                             </div>
 
@@ -345,14 +347,14 @@
 
                                     <div class="control-group">
                                         <div class="controls controls-row">
-                                            <input class="span6" type="text" placeholder="Street Address 1" id="parent1Address1" required>
+                                            <input class="span6" type="text" placeholder="Street Address 1" minlength="2" required data-validation-minlength-message="Please enter the parent&#39;s address" data-validation-required-message="Parent&#39;s address is required" id="parent1Address1" name="entry.5427084">
                                         </div>
                                         <div class="controls controls-row">
-                                            <input class="span6" type="text" placeholder="Street Address 2" id="parent1Address2">
+                                            <input class="span6" type="text" placeholder="Street Address 2" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s address" id="parent1Address2" name="entry.1223089344">
                                         </div>
                                         <div class="controls controls-row">
-                                            <input class="span4" type="text" placeholder="City" id="parent1City" required>
-                                            <input class="span2" type="text" pattern="\d*" placeholder="Zip code" id="parent1Zip" data-validation-regex-regex="^\d{5}(-\d{4})?$" data-validation-regex-message="A valid Zip Code is xxxxx or xxxxx-xxxx" required>
+                                            <input class="span4" type="text" placeholder="City" minlength="2" required data-validation-minlength-message="Please enter the parent&#39;s city" data-validation-required-message="Parent&#39;s city is required" id="parent1City" name="entry.1061114713">
+                                            <input class="span2" type="text" pattern="(\d{5}([\-]\d{4})?)" required placeholder="Zip code" data-validation-pattern-message="A valid Zip Code is xxxxx or xxxxx-xxxx" data-validation-required-message="Parent&#39;s zip code is required" id="parent1Zip" name="entry.1896388497">
                                         </div>
                                         <p class="help-block"></p>
                                     </div>
@@ -363,8 +365,8 @@
                             <div class="control-group">
                                 <label class="control-label">Parent's Phone Number</label>
                                 <div class="controls controls-row">
-                                    <input class="span3" type="text" pattern="\d*" plpattern="\d*" aceholder="Home" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Home phone number is xxx-xxx-xxxx." required>
-                                    <input class="span3" type="text" pattern="\d*" placeholder="Cell" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Cell phone number is xxx-xxx-xxxx.">
+                                    <input class="span3" type="text" placeholder="Home" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" required data-validation-pattern-message="A valid home phone number is xxx-xxx-xxxx" data-validation-required-message="Parent&#39;s home phone number is required" name="entry.1531588408"> 
+                                    <input class="span3" type="text" placeholder="Cell" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-pattern-message="A valid cell phone number is xxx-xxx-xxxx" name="entry.1710725637">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
@@ -372,16 +374,17 @@
                             <div class="control-group">
                                 <label class="control-label">Parent's Email</label>
                                 <div class="controls">
-                                    <input class="span6" type="email" placeholder="Email" data-validation-email-message="A valid email address is name@domain.com">
+                                    <input class="span6" type="email" placeholder="Email" required data-validation-email-message="A valid email address is name@domain.com" data-validation-required-message="Parent&#39;s email address is required" name="entry.1166997190">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
+
                             <h5 style="padding-top: 1em;">Parent 2</h5>
                             <div class="control-group">
                                 <label class="control-label">Parent's Name</label>
                                 <div class="controls controls-row">
-                                    <input class="span3" type="text" placeholder="Last name">
-                                    <input class="span3" type="text" placeholder="First name">
+                                    <input class="span3" type="text" placeholder="Last name" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s last name" name="entry.1898787858">
+                                    <input class="span3" type="text" placeholder="First name" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s last name" name="entry.1259335100">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
@@ -389,7 +392,7 @@
                             <div class="control-group">
                                 <label class="control-label">Parent's Address</label>
                                 <label class="checkbox">
-                                    <input type="checkbox" id="sameAddress2" data-parent="#accordion2" href="#collapseTwo"> Same as Student's
+                                    <input type="checkbox" id="sameAddress2" data-parent="#accordion2" href="#collapseTwo">Same as Student&#39;s
                                 </label>
                             </div>
 
@@ -398,14 +401,14 @@
 
                                     <div class="control-group">
                                         <div class="controls controls-row">
-                                            <input class="span6" type="text" placeholder="Street Address 1" id="parent2Address1">
+                                            <input class="span6" type="text" placeholder="Street Address 1" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s address" id="parent2Address1" name="entry.535629346">
                                         </div>
                                         <div class="controls controls-row">
-                                            <input class="span6" type="text" placeholder="Street Address 2" id="parent2Address2">
+                                            <input class="span6" type="text" placeholder="Street Address 2" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s address" id="parent2Address2" name="entry.704643868">
                                         </div>
                                         <div class="controls controls-row">
-                                            <input class="span4" type="text" placeholder="City" id="parent2City">
-                                            <input class="span2" type="text" pattern="\d*" placeholder="Zip code" id="parent2Zip" data-validation-regex-regex="^\d{5}(-\d{4})?$" data-validation-regex-message="A valid Zip Code is xxxxx or xxxxx-xxxx">
+                                            <input class="span4" type="text" placeholder="City" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s address" id="parent2City" name="entry.382992303">
+                                            <input class="span2" type="text" pattern="(\d{5}([\-]\d{4})?)" placeholder="Zip code" data-validation-pattern-message="A valid Zip Code is xxxxx or xxxxx-xxxx" id="parent2Zip" name="entry.81690918">
                                         </div>
                                         <p class="help-block"></p>
                                     </div>
@@ -416,15 +419,15 @@
                             <div class="control-group">
                                 <label class="control-label">Parent's Phone Number</label>
                                 <div class="controls controls-row">
-                                    <input class="span3" type="text" pattern="\d*" placeholder="Home" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Home Phone number is xxx-xxx-xxxx.">
-                                    <input class="span3" type="text" pattern="\d*" placeholder="Cell" data-validation-regex-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-regex-message="A valid Cell Phone number is xxx-xxx-xxxx.">
+                                    <input class="span3" type="text" placeholder="Home" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-pattern-message="A valid home phone number is xxx-xxx-xxxx" name="entry.165627064">
+                                    <input class="span3" type="text" placeholder="Cell" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-pattern-message="A valid cell phone number is xxx-xxx-xxxx" name="entry.372228359">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Parent's Email</label>
                                 <div class="controls">
-                                    <input class="span6" type="email" placeholder="Email" data-validation-email-message="A valid email address is name@domain.com">
+                                    <input class="span6" type="email" placeholder="Email" data-validation-email-message="A valid email address is name@domain.com" name="entry.570456822">
                                 </div>
                                 <p class="help-block"></p>
                             </div>
@@ -515,44 +518,32 @@
             <div class="container">
                 <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
                 <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-                <!--
-                <ul class="footer-links">
-                    <li><a href="http://blog.getbootstrap.com">Blog</a></li>
-                    <li class="muted">&middot;</li>
-                    <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Issues</a></li>
-                    <li class="muted">&middot;</li>
-                    <li><a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md">Changelog</a></li>
-                </ul>
-            -->
             </div>
         </footer>
 
         <script src="http://code.jquery.com/jquery.js"></script>
         <script src="js/bootstrap-transition.js"></script>
-        <script src="js/bootstrap-alert.js"></script>
         <script src="js/bootstrap-dropdown.js"></script>
         <script src="js/bootstrap-scrollspy.js"></script>
-        <script src="js/bootstrap-tab.js"></script>
-        <script src="js/bootstrap-tooltip.js"></script>
-        <script src="js/bootstrap-button.js"></script>
         <script src="js/bootstrap-collapse.js"></script>
         <script src="js/bootstrap-carousel.js"></script>
         <script src="js/bootstrap-validation.js"></script>
         <script src="js/bootstrap-lightbox.js"></script>
-        <script src="js/bootstrap-popover.js"></script>
-        <script src="js/bootstrap-modal.js"></script>
-        <script src="js/bootstrap-typeahead.js"></script>
-        <script src="js/bootstrap-affix.js"></script>
-        <script src="js/holder.js"></script>
+        <!-- 
+            <script src="js/bootstrap-tab.js"></script>
+            <script src="js/bootstrap-alert.js"></script>
+            <script src="js/bootstrap-tooltip.js"></script>        
+            <script src="js/bootstrap-button.js"></script>        
+            <script src="js/bootstrap-popover.js"></script>        
+            <script src="js/bootstrap-modal.js"></script>
+            <script src="js/bootstrap-typeahead.js"></script>
+            <script src="js/bootstrap-affix.js"></script>
+        -->
 
         <script type="text/javascript">
             $( document ).ready( function(){
-                // fire the following code when the #sameaddress checkbox is ticked
                 $( '#sameAddress1' ).click( function() {
-
-                    // if the #sameaddress checkbox is ticked copy the address form
-                    // field values to the corresponding billing address fields
-                    if( $( '#sameAddress1' ).is( ':checked' ) ){
+                   if( $( '#sameAddress1' ).is( ':checked' ) ) {
                         $( '#parent1Address1' ).val( $( '#studentAddress1' ).val() );
                         $( '#parent1Address2' ).val( $( '#studentAddress2' ).val() );
                         $( '#parent1City' ).val( $( '#studentCity' ).val() );
@@ -561,17 +552,13 @@
                     }
                     else
                     {
-                    // if the #sameaddress checkbox is not ticked set the billing address fields as empty
                         $( '#parent1Address1,#parent1Address2,#parent1City,#parent1Zip' ).val( '' );
                         $( '#collapseOne' ).collapse('show');
                     }
                 });
 
                 $( '#sameAddress2' ).click( function() {
-
-                    // if the #sameaddress checkbox is ticked copy the address form
-                    // field values to the corresponding billing address fields
-                    if( $( '#sameAddress2' ).is( ':checked' ) ){
+                   if( $( '#sameAddress2' ).is( ':checked' ) ) {
                         $( '#parent2Address1' ).val( $( '#studentAddress1' ).val() );
                         $( '#parent2Address2' ).val( $( '#studentAddress2' ).val() );
                         $( '#parent2City' ).val( $( '#studentCity' ).val() );
@@ -585,10 +572,24 @@
                         $( '#collapseTwo' ).collapse('show');
                     }
                 });
-
             });
 
-            $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
+            function goToByScrollByObj(obj){
+                // Scroll
+                if (obj) 
+                    $('html,body').animate({
+                        scrollTop: obj.offset().top},
+                    'slow');
+            }
+
+            $(function () { $("input,select").not("[type=submit]").jqBootstrapValidation({
+                    submitError: function ($form, event, errors) {
+                        goToByScrollByObj($("form div.control-group.error").first());
+                        if( $( '#sameAddress1' ).is( ':checked' ) ) { $( '#collapseOne' ).collapse('show'); }
+                        if( $( '#sameAddress2' ).is( ':checked' ) ) { $( '#collapseTwo' ).collapse('show'); }
+                    }
+                })
+            });
 
         </script>
 
