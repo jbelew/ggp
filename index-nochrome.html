@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Register - Golden Gate Philharmonic</title>
+        <meta name="viewport" content="width=device-width" />
+        <!-- INCLUDE ME! Base presentation classes -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+      
+        <!-- INCLUDE ME! CSS overrides -->
+        <style>   
+            legend {
+                margin-bottom: 0;
+            }
+        </style>
+
+        <!-- INCLUDE ME! Handles older versions of IE -->
+        <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->        
+
+        <!-- Main body of the page -->
+        <div class="container-fluid">
+
+            <div class="row-fluid">
+
+                <!-- This DIV sets the main  content area to 6 columns on the grid -->
+                <div class="span12">
+
+                    <!-- Sample page header -->
+                    <div class="page-header" style="margin-top: 0;">
+                        <h2>Register <small>with the GGP today!</small></h2>
+                    <!-- Close sample header -->
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros in justo bibendum porta in ac arcu. Sed ullamcorper tristique orci quis vehicula. Sed commodo enim at odio rutrum mattis at ac orci. Nam hendrerit, nibh sit amet fringilla tempus, risus mi sollicitudin justo, id consectetur tellus dui suscipit tortor. Ut lobortis mauris at arcu pellentesque posuere. In dignissim posuere ante eu varius. Ut pellentesque rhoncus feugiat. Nulla facilisi.</p>
+
+                    <h3>Student Registration Form</h3>
+
+                    <!-- CHANGE ME! This block handles the Confirmation Page redirect -->
+                    <script type="text/javascript">var submitted=false;</script>
+                    <iframe id="redirect" style="display:none;" onload="if(submitted) {window.location='http://www.badassgeek.com/ggp/confirmation.html';}"></iframe>
+
+                    <!-- Start of the main registration form -->
+                    <form class="forms-horizontal" action="https://docs.google.com/forms/d/1pzb-0YRzIWBTawsSIo2NMG0PF2GGB77nllRET-QH684/formResponse" method="POST" id="ss-form" target="redirect" onsubmit="submitted=true;" novalidate>
+            
+                        <!-- Student Information fieldset -->
+                        <fieldset>
+                            <legend><h4>Student Information</h4></legend>
+                            <div class="control-group">
+                                <label class="control-label">Student's Name</label>
+                                <div class="controls controls-row">
+                                    <input class="span6" type="text" placeholder="Last name" minlength="2" required data-validation-minlength-message="Please enter the student&#39;s last name" data-validation-required-message="Student&#39;s last name is required" name="entry.1427412331">
+                                    <input class="span6" type="text" placeholder="First name" minlength="2" required data-validation-minlength-message="Please enter the student&#39;s first name" data-validation-required-message="Student&#39;s first name is required" name="entry.2103065976">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Student's Address</label>
+                                <div class="controls controls-row">
+                                    <input class="span12" type="text" placeholder="Street Address 1" minlength="2" required data-validation-minlength-message="Please enter the student&#39;s address" data-validation-required-message="Student&#39;s address is required" id="studentAddress1" name="entry.1287574879">
+                                </div>
+                                <div class="controls controls-row">
+                                    <input class="span12" type="text" placeholder="Street Address 2" minlength="2" data-validation-minlength-message="Please enter the student&#39;s address" id="studentAddress2" name="entry.1770251736">
+                                </div>
+                                <div class="controls controls-row">
+                                    <input class="span8" type="text" placeholder="City" minlength="2" required data-validation-minlength-message="Please enter the student&#39;s city" data-validation-required-message="Student&#39;s city is required" id="studentCity"  name="entry.124001901">
+                                    <input class="span4" type="text" pattern="(\d{5}([\-]\d{4})?)" required placeholder="Zip code" data-validation-pattern-message="A valid zip code is xxxxx or xxxxx-xxxx" data-validation-required-message="Student&#39;s zip code is required" id="studentZip" name="entry.1081028019">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Student's Phone Number</label>
+                                <div class="controls controls-row">
+                                    <input class="span6" type="text" placeholder="Home" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" required data-validation-pattern-message="A valid home phone number is xxx-xxx-xxxx" data-validation-required-message="Student&#39;s home phone number  is required" name="entry.1388054789">
+                                    <input class="span6" type="text" placeholder="Cell" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-pattern-regex="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-pattern-message="A valid cell phone number is xxx-xxx-xxxx" name="entry.2010040286">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Student's Email</label>
+                                <div class="controls">
+                                    <input class="span12" type="email" placeholder="Email" data-validation-email-message="A valid email address is name@domain.com" name="entry.185930469">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                             <div class="control-group">
+                                <label class="control-label">School</label>
+                                <div class="controls controls-row">
+                                    <input class="span8" type="text" placeholder="School" minlength="2" required data-validation-minlength-message="Please enter the student&#39;s school" data-validation-required-message="Student&#39;s school is required" name="entry.111911426" />
+                                    <select class="span4" required data-validation-required-message="Grade level in September is required" name="entry.452786849">
+                                        <option value="">Grade in September</option>
+                                        <option value="K">K</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                        </fieldset>
+
+                        <!-- Music Information fieldset -->
+                        <fieldset>
+                            <legend><h4>Music Information</h4></legend>
+                            <div class="control-group">
+                                <label class="control-label">Intrument</label>
+                                <div class="controls controls-row">
+                                    <select class="span8" required data-validation-required-message="Student&#39;s instrument is required" name="entry.1636871964">
+                                        <option value="">Instrument</option>
+                                        <option value="Violin">Violin</option>
+                                        <option value="Viola">Viola</option>
+                                        <option value="Cello">Cello</option>
+                                        <option value="Bass">Bass</option>
+                                    </select>
+                                    <input class="span4" type="text" pattern="\d*" placeholder="Years Played" required data-validation-pattern-message="Please enter the number of years the student has been playing the selected instrument" data-validation-required-message="The number of years the student has been playing their instrument is required" name="entry.1063183318">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Previous Intrument</label>
+                                <div class="controls controls-row">
+                                    <input class="span8" type="text" placeholder="Instrument" name="entry.1984431309">
+                                    <input class="span4" type="text" pattern="\d*" placeholder="Years Played" data-validation-pattern-message="Please enter the number of years the student played thier previous instrument" name="entry.1508682916">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Music Teacher</label>
+                                <div class="controls">
+                                    <input class="span12" type="text" placeholder="Name" minlength="2" data-validation-minlength-message="Please enter the name of the student&#39;s music teacher" name="entry.1495915359">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Current Piece</label>
+                                <div class="controls">
+                                    <input class="span12" type="text" placeholder="Name" minlength="2" data-validation-minlength-message="Please enter the name of the piece the student is currently studying" name="entry.421506774">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                        </fieldset>
+
+                        <!-- Parent Information fieldset -->
+                        <fieldset>
+                            <legend><h4>Parent Information</h4></legend>
+                            <h5 style="padding-top: 1em;">Parent 1</h5>
+                            <div class="control-group">
+                                <label class="control-label">Parent&#39;s Name</label>
+                                <div class="controls controls-row">
+                                    <input class="span6" type="text" placeholder="Last name" minlength="2" required data-validation-minlength-message="Please enter the parent&#39;s last name" data-validation-required-message="Parent&#39;s last name is required" name="entry.800952487">
+                                    <input class="span6" type="text" placeholder="First name" minlength="2" required data-validation-minlength-message="Please enter the parent&#39;s first name" data-validation-required-message="Parent&#39;s first name is required" name="entry.1288117817">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="sameAddress1" data-parent="#accordion1" href="#collapseOne"> Same as Student&#39;s
+                                </label>
+                            </div>
+                            <div id="collapseOne" class="accordion-body collapse in">
+                                <div class="accordion-inner" style="padding: 0;">
+                                    <div class="control-group">
+                                        <div class="controls controls-row">
+                                            <input class="span12" type="text" placeholder="Street Address 1" minlength="2" required data-validation-minlength-message="Please enter the parent&#39;s address" data-validation-required-message="Parent&#39;s address is required" id="parent1Address1" name="entry.5427084">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input class="span12" type="text" placeholder="Street Address 2" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s address" id="parent1Address2" name="entry.1223089344">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input class="span8" type="text" placeholder="City" minlength="2" required data-validation-minlength-message="Please enter the parent&#39;s city" data-validation-required-message="Parent&#39;s city is required" id="parent1City" name="entry.1061114713">
+                                            <input class="span4" type="text" pattern="(\d{5}([\-]\d{4})?)" required placeholder="Zip code" data-validation-pattern-message="A valid Zip Code is xxxxx or xxxxx-xxxx" data-validation-required-message="Parent&#39;s zip code is required" id="parent1Zip" name="entry.1896388497">
+                                        </div>
+                                        <p class="help-block"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Parent's Phone Number</label>
+                                <div class="controls controls-row">
+                                    <input class="span6" type="text" placeholder="Home" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" required data-validation-pattern-message="A valid home phone number is xxx-xxx-xxxx" data-validation-required-message="Parent&#39;s home phone number is required" name="entry.1531588408"> 
+                                    <input class="span6" type="text" placeholder="Cell" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-pattern-message="A valid cell phone number is xxx-xxx-xxxx" name="entry.1710725637">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Parent's Email</label>
+                                <div class="controls">
+                                    <input class="span12" type="email" placeholder="Email" required data-validation-email-message="A valid email address is name@domain.com" data-validation-required-message="Parent&#39;s email address is required" name="entry.1166997190">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <h5 style="padding-top: 1em;">Parent 2</h5>
+                            <div class="control-group">
+                                <label class="control-label">Parent's Name</label>
+                                <div class="controls controls-row">
+                                    <input class="span6" type="text" placeholder="Last name" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s last name" name="entry.1898787858">
+                                    <input class="span6" type="text" placeholder="First name" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s last name" name="entry.1259335100">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Parent's Address</label>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="sameAddress2" data-parent="#accordion2" href="#collapseTwo">Same as Student&#39;s
+                                </label>
+                            </div>
+                            <div id="collapseTwo" class="accordion-body collapse in">
+                                <div class="accordion-inner" style="padding: 0;">
+
+                                    <div class="control-group">
+                                        <div class="controls controls-row">
+                                            <input class="span12" type="text" placeholder="Street Address 1" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s address" id="parent2Address1" name="entry.535629346">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input class="span12" type="text" placeholder="Street Address 2" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s address" id="parent2Address2" name="entry.704643868">
+                                        </div>
+                                        <div class="controls controls-row">
+                                            <input class="span8" type="text" placeholder="City" minlength="2" data-validation-minlength-message="Please enter the parent&#39;s address" id="parent2City" name="entry.382992303">
+                                            <input class="span4" type="text" pattern="(\d{5}([\-]\d{4})?)" placeholder="Zip code" data-validation-pattern-message="A valid Zip Code is xxxxx or xxxxx-xxxx" id="parent2Zip" name="entry.81690918">
+                                        </div>
+                                        <p class="help-block"></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Parent's Phone Number</label>
+                                <div class="controls controls-row">
+                                    <input class="span6" type="text" placeholder="Home" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-pattern-message="A valid home phone number is xxx-xxx-xxxx" name="entry.165627064">
+                                    <input class="span6" type="text" placeholder="Cell" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" data-validation-pattern-message="A valid cell phone number is xxx-xxx-xxxx" name="entry.372228359">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Parent's Email</label>
+                                <div class="controls">
+                                    <input class="span12" type="email" placeholder="Email" data-validation-email-message="A valid email address is name@domain.com" name="entry.570456822">
+                                </div>
+                                <p class="help-block"></p>
+                            </div>
+                        </fieldset>
+
+                        <!-- Form buttons -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" style="font-weight: bold;">Submit</button>
+                            <button type="button" class="btn">Cancel</button>
+                        </div>
+                
+                    </form>
+
+                <!-- Close main span6 -->
+                </div>
+
+        <!-- INCLUDE ME! Bootstrap functions -->
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/bootstrap-transition.js"></script>
+        <script src="js/bootstrap-collapse.js"></script>
+        <script src="js/bootstrap-validation.js"></script>
+
+        <!-- Custom form handling -->
+        <script type="text/javascript">
+
+            $( document ).ready( function(){
+                $( '#sameAddress1' ).click( function() {
+                   if( $( '#sameAddress1' ).is( ':checked' ) ) {
+                        $( '#parent1Address1' ).val( $( '#studentAddress1' ).val() );
+                        $( '#parent1Address2' ).val( $( '#studentAddress2' ).val() );
+                        $( '#parent1City' ).val( $( '#studentCity' ).val() );
+                        $( '#parent1Zip' ).val( $( '#studentZip' ).val() );
+                        $( '#collapseOne' ).collapse('hide');
+                    }
+                    else
+                    {
+                        $( '#parent1Address1,#parent1Address2,#parent1City,#parent1Zip' ).val( '' );
+                        $( '#collapseOne' ).collapse('show');
+                    }
+                });
+                $( '#sameAddress2' ).click( function() {
+                   if( $( '#sameAddress2' ).is( ':checked' ) ) {
+                        $( '#parent2Address1' ).val( $( '#studentAddress1' ).val() );
+                        $( '#parent2Address2' ).val( $( '#studentAddress2' ).val() );
+                        $( '#parent2City' ).val( $( '#studentCity' ).val() );
+                        $( '#parent2Zip' ).val( $( '#studentZip' ).val() );
+                        $( '#collapseTwo' ).collapse('hide');
+                    }
+                    else
+                    {
+                        $( '#parent2Address1,#parent2Address2,#parent2City,#parent2Zip' ).val( '' );
+                        $( '#collapseTwo' ).collapse('show');
+                    }
+                });
+            });
+
+            function goToByScrollByObj(obj){
+                // Scroll
+                if (obj) 
+                    $('html,body').animate({
+                        scrollTop: obj.offset().top},
+                    'slow');
+            }
+
+            $(function () { $("input,select").not("[type=submit]").jqBootstrapValidation({
+                    submitError: function ($form, event, errors) {
+                        goToByScrollByObj($("form div.control-group.error").first());
+                        if( $( '#sameAddress1' ).is( ':checked' ) ) { $( '#collapseOne' ).collapse('show'); }
+                        if( $( '#sameAddress2' ).is( ':checked' ) ) { $( '#collapseTwo' ).collapse('show'); }
+                    }
+                })
+            });
+
+        </script>
+
+    </body>
+</html>
